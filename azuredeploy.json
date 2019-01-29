@@ -6,7 +6,7 @@
             "type": "string",
             "defaultValue": "UK South"
         },
-        "resourceGroupName": {
+        "rgName": {
             "type": "string",
             "defaultValue": "turing-binderhub"
         }
@@ -18,7 +18,7 @@
             "apiVersion": "2018-05-01",
             "type": "Microsoft.Resources/resourceGroups",
             "location": "[parameters('rgLocation')]",
-            "name": "[parameters('resourceGroupName')]",
+            "name": "[parameters('rgName')]",
             "properties": {}
         }
     ],
