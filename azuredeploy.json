@@ -53,10 +53,12 @@
             }
         },
         "resourceGroupLocation": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "UK South"
         },
         "resourceGroupName": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "turing-binderhub"
         },
         "sshRSAPublicKey": {
             "type": "string",
