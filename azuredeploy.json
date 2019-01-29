@@ -4,7 +4,10 @@
     "parameters": {
         "resourceGroupLocation": {
             "type": "string",
-            "defaultValue": "UK South"
+            "allowedValues": [
+                "UK South",
+                "UK West"
+            ]
         }
     },
     "resources": [
