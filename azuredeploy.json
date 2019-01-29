@@ -52,6 +52,12 @@
                 "description": "The number of Kubernetes masters for the cluster."
             }
         },
+        "resourceGroupLocation": {
+            "type": "string"
+        },
+        "resourceGroupName": {
+            "type": "string"
+        },
         "sshRSAPublicKey": {
             "type": "string",
             "metadata": {
@@ -99,7 +105,14 @@
     },
     "resources": [
         {
-            "apiVersion": "2016-09-30",
+            "apiVersion": "2018-05-01",
+            "type": "Microsoft.Resources/resourceGroups",
+            "location": "[parameters('resourceGroupLocation')]",
+            "name": "[parameters('resourceGroupName')]",
+            "properties": {}
+        },
+        {
+            "apiVersion": "2018-05-01",
             "type": "Microsoft.ContainerService/containerServices",
             "location": "[parameters('location')]",
             "name": "[concat('containerservice-',resourceGroup().name)]",
