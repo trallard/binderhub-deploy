@@ -2,21 +2,16 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "resourceGroupName": {
-            "type": "string",
-            "defaultValue": "hub23"
-        },
         "resourceGroupLocation": {
             "type": "string",
-            "defaultValue": "uksouth"
+            "defaultValue": "UK South"
         }
     },
     "resources": [
         {
             "type": "Microsoft.Resources/resourceGroups",
             "apiVersion": "2015-01-01",
-            "location": "[parameters('resourceGroupLocation')]",
-            "name": "[parameters('resourceGroupName')]"
+            "location": "[parameters('resourceGroupLocation')]"
         }
     ],
     "outputs": {}
