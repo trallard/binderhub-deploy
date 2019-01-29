@@ -1,27 +1,23 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
-    "contentVersion": "1.0.0.0",
+    "contentVersion": "1.0.0.1",
     "parameters": {
-        "rgLocation": {
-            "type": "string",
-            "defaultValue": "UK South"
+        "resourceGroupName": {
+            "type": "string"
         },
-        "rgName": {
-            "type": "string",
-            "defaultValue": "turing-binderhub"
+        "resourceGroupLocation": {
+            "type": "string"
         }
     },
-    "variables": {
-    },
+    "variables": {},
     "resources": [
         {
-            "apiVersion": "2018-05-01",
             "type": "Microsoft.Resources/resourceGroups",
-            "location": "[parameters('rgLocation')]",
-            "name": "[parameters('rgName')]",
+            "apiVersion": "2018-05-01",
+            "location": "[parameters('resourceGroupLocation')]",
+            "name": "[parameters('resourceGroupName')]",
             "properties": {}
         }
     ],
-    "outputs": {
-    }
+    "outputs": {}
 }
