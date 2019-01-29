@@ -2,7 +2,7 @@
     "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "resourceGroupLocation": {
+        "rgLocation": {
             "type": "string",
             "defaultValue": "UK South"
         },
@@ -17,7 +17,7 @@
         {
             "apiVersion": "2018-05-01",
             "type": "Microsoft.Resources/resourceGroups",
-            "location": "[parameters('resourceGroupLocation')]",
+            "location": "[parameters('rgLocation')]",
             "name": "[parameters('resourceGroupName')]",
             "properties": {}
         }
